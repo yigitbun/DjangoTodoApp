@@ -3,9 +3,9 @@ from .models import Todo
 
 # Create your views here.
 def index(request):
-    
+    todos = Todo.objects.all()
 
-    return render(request,"index.html")
+    return render(request,"index.html", {"todos":todos})
 
 def addTodo(request):
     if request.method == 'GET':

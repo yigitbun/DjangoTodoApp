@@ -21,6 +21,8 @@
             <button type="submit" class="btn btn-primary">Hinzufügen</button>
           </form>
           <hr>
+
+          {% if todos %}
           <table class="table">
             <thead>
               <tr>
@@ -40,6 +42,16 @@
               </tr> -->
             </tbody>
           </table>
+          {% else %}
+
+          <div class = "alert alert-danger">
+            Herhangi bir todo yok.
+          </div>
+
+          {% endif %}
+
+
+          
     </div>
     
 
